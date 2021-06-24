@@ -22,7 +22,11 @@
 
 body {
 	min-height: 100vh;
-	background-color: #fafafa;
+	background: #f5e7b8;
+	text-align: center;
+}
+form{
+	display: inline-block;
 }
 
 .container {
@@ -72,6 +76,10 @@ body {
 .gallery-image:hover {
 	transform: scale(1.15);
 }
+.search{
+	height: 50px;
+	width: 400px;
+}
 
 @supports (display: grid) {
 	.gallery {
@@ -95,7 +103,11 @@ body {
 <form method="POST">
 	{% csrf_token %}
 	<label style="font-size:20px;"> Enter text to search image </label>
-	<input type="text" name="search" placeholder="E.g. Cars">
+	<br>
+	<br>
+	<input type="text" name="search" class="search" placeholder="E.g. Cars">
+	<br>
+	<br>
 	<input type="submit" value="Get Images">
 </form>
 
